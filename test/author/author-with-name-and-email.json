@@ -1,0 +1,13 @@
+{
+    "type": "root",
+    "modules": [
+        {
+            "jsdocType": "module",
+            "name": "test",
+            "author": {
+                "name": "Vasya Pupkin",
+                "email": "<pupkin@yandex.ru>"
+            }
+        }
+    ]
+}

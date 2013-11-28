@@ -1,0 +1,10 @@
+{
+    "type": "root",
+    "modules": [
+        {
+            "jsdocType": "module",
+            "name": "test",
+            "version": "1.4.2"
+        }
+    ]
+}

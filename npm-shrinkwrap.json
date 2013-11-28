@@ -1,0 +1,10 @@
+{
+  "name": "jsd-plugins-bem",
+  "version": "0.0.1",
+  "dependencies": {
+    "jspath": {
+      "version": "0.2.10",
+      "from": "jspath@0.2.10"
+    }
+  }
+}
