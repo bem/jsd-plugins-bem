@@ -1,5 +1,5 @@
 {
-    "type": "root",
+    "jsdocType": "root",
     "modules": [
         {
             "jsdocType": "module",
@@ -16,14 +16,6 @@
                         "jsdocType": "type",
                         "jsType": "Object",
                         "props": [
-                            {
-                                "key": "__constructor",
-                                "val": {
-                                    "jsdocType": "type",
-                                    "jsType": "Function",
-                                    "isConstructor": true
-                                }
-                            },
                             {
                                 "key": "start",
                                 "val": {
@@ -58,6 +50,10 @@
                     "augments": {
                         "jsdocType": "type",
                         "jsType": "events:Emitter"
+                    },
+                    "cons": {
+                        "jsdocType": "type",
+                        "jsType": "Function"
                     }
                 }
             }

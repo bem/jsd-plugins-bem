@@ -7,12 +7,19 @@
             "exports": {
                 "jsdocType": "type",
                 "jsType": "Function",
+                "description": "Description\nmulti\nline",
                 "params": [
                     {
                         "jsdocType": "param",
                         "name": "a",
-                        "description": "",
-                        "jsType": "external-module"
+                        "description": "Param\nmultiline",
+                        "jsType": "*"
+                    },
+                    {
+                        "jsdocType": "param",
+                        "name": "b",
+                        "description": "Param\nmultiline",
+                        "jsType": "*"
                     }
                 ]
             }

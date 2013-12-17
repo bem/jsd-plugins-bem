@@ -7,21 +7,6 @@
             "exports": {
                 "jsdocType": "class",
                 "name": "ModuleClass",
-                "static": {
-                    "jsdocType": "type",
-                    "jsType": "Object",
-                    "props": [
-                        {
-                            "key": "staticMethod",
-                            "val": {
-                                "jsdocType": "type",
-                                "jsType": "Function",
-                                "description": "Description of static method",
-                                "accessLevel": "private"
-                            }
-                        }
-                    ]
-                },
                 "proto": {
                     "jsdocType": "type",
                     "jsType": "Object",
@@ -32,7 +17,7 @@
                                 "jsdocType": "type",
                                 "jsType": "Function",
                                 "description": "Description of method1",
-                                "accessLevel": "private"
+                                "isAbstract": true
                             }
                         },
                         {
@@ -40,8 +25,8 @@
                             "val": {
                                 "jsdocType": "type",
                                 "jsType": "Function",
-                                "description": "Description of method2",
-                                "accessLevel": "protected"
+                                "description": "Description of method1",
+                                "isOverridden": true
                             }
                         },
                         {
@@ -49,16 +34,8 @@
                             "val": {
                                 "jsdocType": "type",
                                 "jsType": "Function",
-                                "description": "Description of method3",
-                                "accessLevel": "public"
-                            }
-                        },
-                        {
-                            "key": "method4",
-                            "val": {
-                                "jsdocType": "type",
-                                "jsType": "Function",
-                                "description": "Description of method4"
+                                "description": "Description of method1",
+                                "isFinal": true
                             }
                         }
                     ]
