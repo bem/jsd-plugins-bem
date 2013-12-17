@@ -10,7 +10,7 @@
         "jspath" : "0.2.10"
     },
     "devDependencies" : {
-        "jsd" : "0.0.1",
+        "jsd" : "1.0.0",
         "mocha" : "1.13.0",
         "chai" : "1.8.1",
         "istanbul" : "0.1.44"
