@@ -12,7 +12,6 @@ exports.testPlugins = function(testFile) {
             'event',
             'type',
             'exports',
-            'description',
             'constructor',
             'access-level',
             'method-restrictions',
@@ -25,8 +24,11 @@ exports.testPlugins = function(testFile) {
             'bem',
             'returns',
             'example',
-            'license'
+            'license',
+            require('jsd/plugins/description')
         ].map(function(plugin) {
-            return PATH.join(PRJ_ROOT, 'plugins', plugin);
+            return typeof plugin === 'string'?
+                PATH.join(PRJ_ROOT, 'plugins', plugin) :
+                plugin;
         }));
 };
