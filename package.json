@@ -1,22 +1,28 @@
 {
-    "name" : "jsd-plugins-bem",
-    "version" : "0.0.1",
-    "author" : "Sergey Berezhnoy <veged@ya.ru>",
-    "contributors" : [
-        { "name" : "Sergey Berezhnoy", "email" : "veged@ya.ru" },
-        { "name" : "Dmitry Filatov", "email" : "dfilatov@yandex-team.ru" }
-    ],
-    "dependencies": {
-        "jspath" : "0.2.10"
+  "name": "jsd-plugins-bem",
+  "version": "1.0.0",
+  "author": "Sergey Berezhnoy <veged@ya.ru>",
+  "contributors": [
+    {
+      "name": "Sergey Berezhnoy",
+      "email": "veged@ya.ru"
     },
-    "devDependencies" : {
-        "jsd" : "1.0.0",
-        "mocha" : "1.13.0",
-        "chai" : "1.8.1",
-        "istanbul" : "0.1.44"
-    },
-    "scripts" : {
-        "test" : "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -R spec",
-        "accept-all-test" : "for i in `find test/ -name *.res.json`; do cp $i `echo $i | sed 's/res.//'`; done"
+    {
+      "name": "Dmitry Filatov",
+      "email": "dfilatov@yandex-team.ru"
     }
+  ],
+  "dependencies": {
+    "jspath": "0.2.10"
+  },
+  "devDependencies": {
+    "jsd": "1.0.0",
+    "mocha": "1.13.0",
+    "chai": "1.8.1",
+    "istanbul": "0.1.44"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -R spec",
+    "accept-all-test": "for i in `find test/ -name *.res.json`; do cp $i `echo $i | sed 's/res.//'`; done"
+  }
 }
