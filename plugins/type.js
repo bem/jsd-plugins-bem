@@ -5,7 +5,7 @@ module.exports = function(jsdoc) {
         })
         .registerBuilder('type', function(tag, jsdocNode, _, astNode) {
             var res = buildTypeNode(jsdocNode, astNode);
-            res.jsType === '*' && tag.jsType !== '*' && (res.jsType = tag.jsType);
+            res.jsType = tag.jsType;
             return res;
         })
         .registerBuilder(function(tags, curJsdocNode, parentJsdocNode, astNode) {
@@ -36,7 +36,7 @@ function buildTypeNode(jsdocNode, astNode) {
 
                 case 'Literal':
                     var value = astNode.value.value,
-                        typeNode = buildTypeNodeInProperty(getLiteralJsType(value), jsdocNode, astNode);
+                        typeNode = buildTypeNodeInProperty(jsdocNode, astNode, getLiteralJsType(value));
 
                     typeNode.jsValue = value;
                     return typeNode;
