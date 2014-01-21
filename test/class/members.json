@@ -1,0 +1,37 @@
+{
+    "jsdocType": "root",
+    "modules": [
+        {
+            "jsdocType": "module",
+            "name": "my-module",
+            "exports": {
+                "jsdocType": "class",
+                "name": "ModuleClass",
+                "members": {
+                    "jsdocType": "type",
+                    "jsType": "Object",
+                    "props": [
+                        {
+                            "key": "member1",
+                            "val": {
+                                "jsdocType": "type",
+                                "jsType": "Number"
+                            }
+                        },
+                        {
+                            "key": "member2",
+                            "val": {
+                                "jsdocType": "type",
+                                "jsType": "Number"
+                            }
+                        }
+                    ]
+                },
+                "cons": {
+                    "jsdocType": "type",
+                    "jsType": "Function"
+                }
+            }
+        }
+    ]
+}

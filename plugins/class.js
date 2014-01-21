@@ -21,12 +21,17 @@ module.exports = function(jsdoc) {
                     'static'];
         })
         .registerBuilder('member', function(tag, curJsdocNode, parentNode, astNode) {
-            var name = JSPATH(
-                '.{.type === "ExpressionStatement"}' +
-                    '.expression{.type === "AssignmentExpression"}' +
-                        '.left{.type === "MemberExpression" && .object.type === "ThisExpression"}' +
-                            '.property{.type === "Identifier"}.name[0]',
-                astNode);
+            var assigmentExpression = '{.type === "AssignmentExpression"}' +
+                    '.left{.type === "MemberExpression" && .object.type === "ThisExpression"}' +
+                        '.property{.type === "Identifier"}.name',
+                name = JSPATH(
+                    '.(' +
+                        '.{.type === "ExpressionStatement"}' +
+                            '.expression' + assigmentExpression +
+                        '|' +
+                        '.' + assigmentExpression +
+                    ')[0]',
+                    astNode);
 
             if(!name) throw Error('Using @member for unsupported statement');
 
