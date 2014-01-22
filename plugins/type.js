@@ -42,7 +42,7 @@ function buildTypeNode(jsdocNode, astNode) {
                     return typeNode;
 
                 default:
-                    return buildUnknownTypeNode();
+                    return buildTypeNodeInProperty(jsdocNode, astNode, '*');
             }
 
         case 'Literal':
