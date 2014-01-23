@@ -1,0 +1,12 @@
+{
+    "jsdocType": "root",
+    "modules": [
+        {
+            "jsdocType": "module",
+            "name": "test",
+            "see": [
+                "http://example.com/test"
+            ]
+        }
+    ]
+}
