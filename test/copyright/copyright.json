@@ -1,0 +1,15 @@
+{
+    "jsdocType": "root",
+    "modules": [
+        {
+            "jsdocType": "module",
+            "name": "my-module",
+            "copyright": "Ivan Ivanov",
+            "exports": {
+                "jsdocType": "type",
+                "jsType": "Object",
+                "props": []
+            }
+        }
+    ]
+}
