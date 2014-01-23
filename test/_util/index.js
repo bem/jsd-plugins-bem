@@ -25,6 +25,7 @@ exports.testPlugins = function(testFile) {
             'returns',
             'example',
             'license',
+            'copyright',
             'see',
             require('jsd/plugins/description')
         ].map(function(plugin) {
