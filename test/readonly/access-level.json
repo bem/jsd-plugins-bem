@@ -1,0 +1,25 @@
+{
+    "jsdocType": "root",
+    "modules": [
+        {
+            "jsdocType": "module",
+            "name": "my-module",
+            "exports": {
+                "jsdocType": "type",
+                "jsType": "Object",
+                "props": [
+                    {
+                        "key": "prop",
+                        "val": {
+                            "jsdocType": "type",
+                            "jsType": "String",
+                            "jsValue": "val",
+                            "isReadOnly": true,
+                            "description": "Property"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

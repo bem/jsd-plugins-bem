@@ -27,6 +27,7 @@ exports.testPlugins = function(testFile) {
             'license',
             'copyright',
             'see',
+            'readonly',
             require('jsd/plugins/description')
         ].map(function(plugin) {
             return typeof plugin === 'string'?
