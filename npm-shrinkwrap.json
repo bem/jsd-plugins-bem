@@ -1,10 +1,11 @@
 {
   "name": "jsd-plugins-bem",
-  "version": "0.0.1",
+  "version": "1.2.0",
   "dependencies": {
     "jspath": {
       "version": "0.2.10",
-      "from": "jspath@0.2.10"
+      "from": "jspath@0.2.10",
+      "resolved": "https://registry.npmjs.org/jspath/-/jspath-0.2.10.tgz"
     }
   }
 }
