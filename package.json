@@ -13,7 +13,7 @@
     }
   ],
   "dependencies": {
-    "jspath": "0.2.10"
+    "jspath": "0.2.11"
   },
   "devDependencies": {
     "jsd": "1.0.1",
