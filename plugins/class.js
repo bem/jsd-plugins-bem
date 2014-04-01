@@ -13,12 +13,17 @@ module.exports = function(jsdoc) {
         .registerBuilder('class', function(tag) {
             return this.currentClass = addClassNode(this, tag.content);
         })
-        .registerBuilder('lends', function(tag) {
-            var matches = tag.content.split('.');
-            return addClassNode(this, matches[0])
-                [matches[matches.length - 1] === 'prototype'?
+        .registerBuilder('lends', function(tag, curJsdocNode, parentJsdocNode) {
+            var matches = tag.content.split('.'),
+                classNode = addClassNode(this, matches[0]),
+                lendsProp = matches[matches.length - 1] === 'prototype'?
                     'proto' :
-                    'static'];
+                    'static';
+
+            if(curJsdocNode === parentJsdocNode)
+                return classNode[lendsProp];
+            else  // in case of many @lends on one ast node
+                classNode[lendsProp] = curJsdocNode;
         })
         .registerBuilder('member', function(tag, curJsdocNode, parentNode, astNode) {
             var assigmentExpression = '{.type === "AssignmentExpression"}' +
