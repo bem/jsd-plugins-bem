@@ -7,6 +7,7 @@ exports.testPlugins = function(testFile) {
         testFile,
         PRJ_ROOT,
         [
+            'file',
             'module',
             'class',
             'event',
