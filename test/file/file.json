@@ -1,0 +1,15 @@
+{
+    "jsdocType": "root",
+    "files": [
+        {
+            "jsdocType": "file",
+            "description": "my module file",
+            "modules": [
+                {
+                    "jsdocType": "module",
+                    "name": "my-module"
+                }
+            ]
+        }
+    ]
+}
