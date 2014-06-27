@@ -1,0 +1,21 @@
+{
+    "jsdocType": "root",
+    "modules": [
+        {
+            "jsdocType": "module",
+            "name": "my-block2",
+            "exports": {
+                "jsdocType": "class",
+                "name": "my-block2",
+                "augments": {
+                    "jsdocType": "type",
+                    "jsType": "my-block"
+                },
+                "bem": {
+                    "jsdocType": "bem",
+                    "block": "my-block2"
+                }
+            }
+        }
+    ]
+}

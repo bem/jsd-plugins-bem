@@ -3,66 +3,86 @@
     "modules": [
         {
             "jsdocType": "module",
-            "name": "i-bem__dom",
+            "name": "my-block",
             "exports": {
-                "jsdocType": "type",
-                "jsType": "Object",
-                "props": [
-                    {
-                        "key": "blocks.my-block",
-                        "val": {
-                            "jsdocType": "class",
-                            "name": "my-block",
-                            "bem": {
-                                "jsdocType": "bem",
-                                "block": "my-block"
-                            }
-                        }
-                    },
-                    {
-                        "key": "blocks.my-block__my-elem1",
-                        "val": {
-                            "jsdocType": "class",
-                            "name": "my-block__my-elem1",
-                            "bem": {
-                                "jsdocType": "bem",
-                                "block": "my-block",
-                                "elem": "my-elem1"
-                            }
-                        }
-                    },
-                    {
-                        "key": "blocks.my-block__my-elem2",
-                        "val": {
-                            "jsdocType": "class",
-                            "name": "my-block__my-elem2",
-                            "bem": {
-                                "jsdocType": "bem",
-                                "block": "my-block",
-                                "elem": "my-elem2",
-                                "modName": "my-mod",
-                                "modVal": "my-val"
-                            }
-                        }
-                    },
-                    {
-                        "key": "blocks.my-block__my-elem3",
-                        "val": {
-                            "jsdocType": "class",
-                            "name": "my-block__my-elem3",
-                            "bem": {
-                                "jsdocType": "bem",
-                                "block": "my-block",
-                                "elem": "my-elem3",
-                                "modName": "my-mod",
-                                "modVal": [
-                                    "my-val1",
-                                    "my-val2"
-                                ]
-                            }
-                        }
+                "jsdocType": "class",
+                "name": "my-block",
+                "bem": {
+                    "jsdocType": "bem",
+                    "modName": "mod1",
+                    "modVal": "val1",
+                    "block": "my-block"
+                }
+            }
+        },
+        {
+            "jsdocType": "module",
+            "name": "my-block",
+            "exports": {
+                "jsdocType": "class",
+                "name": "my-block",
+                "bem": {
+                    "jsdocType": "bem",
+                    "modName": "mod1",
+                    "modVal": "val1",
+                    "block": "my-block"
+                }
+            }
+        },
+        {
+            "jsdocType": "module",
+            "name": "my-block__elem1",
+            "exports": {
+                "jsdocType": "class",
+                "name": "my-block__elem1",
+                "bem": {
+                    "jsdocType": "bem",
+                    "modName": "mod1",
+                    "modVal": "val1",
+                    "block": "my-block__elem1"
+                }
+            }
+        },
+        {
+            "jsdocType": "module",
+            "name": "my-block__elem1",
+            "exports": {
+                "jsdocType": "class",
+                "name": "my-block__elem1",
+                "bem": {
+                    "jsdocType": "bem",
+                    "modName": "mod1",
+                    "modVal": "val1",
+                    "block": "my-block__elem1"
+                }
+            }
+        },
+        {
+            "jsdocType": "module",
+            "name": "my-block2",
+            "exports": {
+                "jsdocType": "class",
+                "name": "my-block2",
+                "augments": {
+                    "jsdocType": "type",
+                    "jsType": "my-block"
+                },
+                "bem": {
+                    "jsdocType": "bem",
+                    "block": "my-block2"
+                }
+            },
+            "classes": {
+                "my-block": {
+                    "jsdocType": "class",
+                    "name": "my-block",
+                    "bem": {
+                        "jsdocType": "bem",
+                        "modName": "mod1",
+                        "modVal": "val1",
+                        "block": "my-block"
                     }
-                ]
+                }
             }
         }
     ]
