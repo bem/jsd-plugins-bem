@@ -1,0 +1,20 @@
+{
+    "jsdocType": "root",
+    "modules": [
+        {
+            "jsdocType": "module",
+            "name": "my-block__elem1",
+            "exports": {
+                "jsdocType": "class",
+                "name": "my-block__elem1",
+                "bem": {
+                    "jsdocType": "bem",
+                    "modName": "mod1",
+                    "modVal": "val1",
+                    "block": "my-block",
+                    "elem": "elem1"
+                }
+            }
+        }
+    ]
+}

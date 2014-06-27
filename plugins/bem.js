@@ -30,15 +30,23 @@ module.exports = function(jsdoc) {
             if(curJsdocNode.jsdocType !== 'class')
                 throw Error('@bem can be mixed with @class only');
 
-            curJsdocNode.bem = tag.block?
-               {
+            if(tag.block) {
+                curJsdocNode.bem = {
                     jsdocType : 'bem',
                     block : tag.block,
                     elem : tag.elem,
                     modName : tag.modName,
                     modVal : tag.modVal
-                } :
-                parseBEMFromAST(astNode);
+                };
+            } else {
+                var bem = curJsdocNode.bem = parseBEMFromAST(astNode),
+                    block = bem.block || (bem.block = this.currentClass.name);
+                if(~block.indexOf('__')) {
+                    var splitted = block.split('__');
+                    bem.block = splitted[0];
+                    bem.elem = splitted[1];
+                }
+            }
         })
         .registerBuilder('bemmod', function(tag, curJsdocNode) {
             var curMod = this.curMod = {
@@ -69,8 +77,7 @@ module.exports = function(jsdoc) {
 
 function parseBEMFromAST(astNode) {
     astNode = JSPATH(
-        '.{.type === "ExpressionStatement"}' +
-            '.expression{.type === "CallExpression"}' +
+            '..*{.type === "CallExpression" && .callee.property.name === "decl"}' +
                 '.arguments[0]',
         astNode);
 
