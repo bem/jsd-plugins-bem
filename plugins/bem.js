@@ -98,8 +98,7 @@ function parseBEMFromAST(astNode) {
                 });
             }
         });
-    } else
-        throw Error('Can\'t implicit parse BEM item from source, use explicit @bem tag.');
+    }
 
     return bem;
 }
