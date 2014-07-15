@@ -2,7 +2,7 @@
  * @module my-block2
  */
 
-modules.define('my-block2', function(provide, MyBlock) {
+modules.define('my-block2', ['my-block', 'i-bem__dom'], function(provide, MyBlock, BEMDOM) {
 
 /**
  * @exports
@@ -10,6 +10,6 @@ modules.define('my-block2', function(provide, MyBlock) {
  * @augments my-block
  * @bem
  */
-provide(MyBlock.decl('my-block2'));
+provide(BEMDOM.decl({ block : this.name, baseBlock : MyBlock }));
 
 });

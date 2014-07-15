@@ -96,8 +96,7 @@ function parseBEMFromAST(astNode) {
                     if(itemNode.type === 'Literal') return itemNode.value;
                         else throw Error('Can\'t implicit parse BEM modifier values from source, use explicit @bem tag.');
                 });
-            } else
-                throw Error('Can\'t implicit parse BEM ' + name + ' from source, use explicit @bem tag.');
+            }
         });
     } else
         throw Error('Can\'t implicit parse BEM item from source, use explicit @bem tag.');
