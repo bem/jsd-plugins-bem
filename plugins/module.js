@@ -2,13 +2,18 @@ module.exports = function(jsdoc) {
     jsdoc
         .registerParser('module', String)
         .registerBuilder('module', function(tag, curJsdocNode) {
-            var moduleNode = this.currentModule = {
-                    jsdocType : 'module',
-                    name : tag.content
-                };
-            (curJsdocNode.modules || (curJsdocNode.modules = [])).push(
-                (this.modules || (this.modules = {}))[tag.content] = moduleNode);
-            return moduleNode;
+            var modules = curJsdocNode.modules || (curJsdocNode.modules = []),
+                moduleNode;
+
+            modules.some(function(module) {
+                var res = module.name === tag.content;
+                if(res) delete (moduleNode = module).exports;
+                return res;
+            }) || modules.push(
+                (this.modules || (this.modules = {}))[tag.content] =
+                    moduleNode = { jsdocType: 'module', name: tag.content });
+
+            return this.currentModule = moduleNode;
         })
         .registerPostprocessor(function(jsdocNode, postprocess) {
             var classes = this.classes;
