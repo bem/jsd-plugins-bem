@@ -1,0 +1,14 @@
+{
+    "jsdocType": "root",
+    "modules": [
+        {
+            "jsdocType": "module",
+            "name": "my-module",
+            "exports": {
+                "jsdocType": "type",
+                "jsType": "Number",
+                "jsValue": 456
+            }
+        }
+    ]
+}
