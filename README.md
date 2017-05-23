@@ -26,5 +26,6 @@ Use [bem-jsd](https://github.com/bem/bem-jsd) for fancy API.
   * @readonly
   * @returns
   * @see
+  * @throws
   * @type
   * @version
